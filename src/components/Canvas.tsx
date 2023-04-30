@@ -114,7 +114,7 @@ export function Canvas(props: CanvasProps): JSX.Element {
 		};
 
 		image.addEventListener("load", onLoad);
-		image.src = "./image.png";
+		image.src = "./canvas.png";
 
 		return () => {
 			image.removeEventListener("load", onLoad);
