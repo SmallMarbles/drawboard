@@ -116,7 +116,7 @@ export function Canvas(props: CanvasProps): JSX.Element {
 		};
 
 		image.addEventListener("load", onLoad);
-		image.src = "./canvas.png";
+		image.src = "./img.png";
 
 		return () => {
 			image.removeEventListener("load", onLoad);
@@ -148,7 +148,7 @@ export function Canvas(props: CanvasProps): JSX.Element {
 	return (
 		<TransformWrapper
 			ref={transformRef}
-			minScale={1}
+			minScale={0.2}
 			maxScale={50}
 			limitToBounds={false}
 			velocityAnimation={{

@@ -15,7 +15,7 @@ const port = 3000;
 const nextApp = next({ dev, hostname, port });
 const handle = nextApp.getRequestHandler();
 
-const image = new PNG(fs.readFileSync("nostatic/canvas.png"));
+const image = new PNG(fs.readFileSync("nostatic/img.png"));
 
 const app = express();
 const server = createServer(app);
@@ -35,18 +35,14 @@ app.use(async (req, res) => {
 });
 
 io.on("connection", socket => {
-	const date = new Date();
-	console.log(`conn  - ${socket.handshake.address} [${date.getHours().toString().padStart(2, "0")}:${date.getMinutes().toString().padStart(2, "0")}:${date.getSeconds().toString().padStart(2, "0")}]`)
-	socket.on("set", args => {
+    socket.on("set", args => {
 		const size = image.size();
 		if (!args || args.x == null || args.y == null || args.x > (size.width - 1)|| args.y > (size.height - 1) || !args.color || typeof args.x !== "number" || typeof args.y !== "number" || typeof args.color !== "string") {
 			return;
 		}
-		console.log(`set   - ${socket.handshake.address} (${args.x}, ${args.y}) ${args.color}`);
-
 		io.sockets.emit("set", args);
 		image.set(args.x, args.y, args.color);
-		image.save("nostatic/canvas.png");
+		image.save("nostatic/img.png");
 	});
 	socket.on("disconnect", () => {
 		console.log(`dconn - ${socket.handshake.address}`)
