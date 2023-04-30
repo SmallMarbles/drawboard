@@ -1,3 +1,5 @@
+// This is the canvas element
+
 import { useWindowSize } from "@/lib/useWindowSize";
 import { RefObject, useEffect, useRef, useState } from "react";
 import {
