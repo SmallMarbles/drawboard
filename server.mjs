@@ -34,18 +34,21 @@ app.use(async (req, res) => {
 	}
 });
 
+ //const months = ["#00FF33", "#FFFFFF"];
 io.on("connection", socket => {
+
     socket.on("set", args => {
+            //colors = getRandomInt(1);
+
 		const size = image.size();
 		if (!args || args.x == null || args.y == null || args.x > (size.width - 1)|| args.y > (size.height - 1) || !args.color || typeof args.x !== "number" || typeof args.y !== "number" || typeof args.color !== "string") {
 			return;
 		}
+      args.color = args.color
 		io.sockets.emit("set", args);
-		image.set(args.x, args.y, args.color);
+
+		image.set(args.x, args.y, args.color);//"#00FF33")//args.color);
 		image.save("nostatic/img.png");
-	});
-	socket.on("disconnect", () => {
-		console.log(`dconn - ${socket.handshake.address}`)
 	});
 });
 

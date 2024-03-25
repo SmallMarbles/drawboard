@@ -23,7 +23,8 @@ export function HelpButton() {
 					title="About Drawr"
 					open={open}
 					close={() => setOpen(false)}>
-					Drawr is an r/Place clone.
+          This is an r/place clone.
+				  This is Edited from Drawr
 				</SimpleDialog>
 			)}
 		</>
