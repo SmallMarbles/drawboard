@@ -15,9 +15,9 @@ export default function Home() {
 
 	const colorRef = useRef<HTMLInputElement>(null);
 
-	return (<>
+	return (<div>
 		<h1>Shh, the canvas is sleeping!</h1><br><h5>Dont wake it up!</h5>
-		</>
+		<div/>
 	
 	);
 }
