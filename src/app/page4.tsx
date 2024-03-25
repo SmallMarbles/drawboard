@@ -15,5 +15,5 @@ export default function Home() {
 
 	const colorRef = useRef<HTMLInputElement>(null);
 
-	return ();
+	return ("");
 }
