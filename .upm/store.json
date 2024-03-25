@@ -1,0 +1,1 @@
+{"version":2,"languages":{"nodejs-npm":{"specfileHash":"83cddbaaa20edd5191758f8b15a1a366","lockfileHash":"c18476e01c589e57e793f773d7dafc1a","guessedImports":["socket.io-client","next","@/components","@/lib","express","socket.io","png-img","prettier-plugin-tailwindcss","react-zoom-pan-pinch","react","@headlessui/react"],"guessedImportsHash":"bb9090b7e09b6e2e1c49a51a50e0e1bc"}}}

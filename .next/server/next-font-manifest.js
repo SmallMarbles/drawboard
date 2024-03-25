@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST={pages:{},app:{'/home/runner/drawr/node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"JetBrains_Mono","arguments":[{"subsets":["latin"],"weight":"500"}],"variableName":"jetbrains_mono"}':["static/media/d41d06924fce966e-s.p.woff2"]},appUsingSizeAdjust:!0,pagesUsingSizeAdjust:!1};
